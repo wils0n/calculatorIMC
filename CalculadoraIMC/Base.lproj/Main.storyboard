@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YZv-E2-Rd9">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculadora de índice de masa corporal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJR-JI-1om">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Calculadora de índice de masa corporal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJR-JI-1om">
                                 <rect key="frame" x="149" y="37" width="302" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -28,9 +28,10 @@
                                 <state key="normal" title="Calcular"/>
                                 <connections>
                                     <action selector="calcularIMC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6T0-vb-16z"/>
+                                    <segue destination="u52-lh-2wd" kind="show" id="Dxc-Ie-U3Y"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kec-eA-UEv">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kec-eA-UEv">
                                 <rect key="frame" x="232" y="81" width="137" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5E-SK-Tis">
@@ -98,6 +99,7 @@
                             <action selector="backgroundTab:" destination="BYZ-38-t0r" eventType="touchDown" id="8HX-gQ-G9Z"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="PyK-pm-XcM"/>
                     <connections>
                         <outlet property="estatura" destination="YnK-Oe-1bU" id="AcF-xU-fYX"/>
                         <outlet property="peso" destination="hsC-0b-mur" id="VD5-uK-ZrX"/>
@@ -106,6 +108,104 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="421" y="413"/>
+        </scene>
+        <!--Vista Resultados View Controller-->
+        <scene sceneID="PUH-zn-Dbj">
+            <objects>
+                <viewController id="u52-lh-2wd" customClass="VistaResultadosViewController" customModule="CalculadoraIMC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MPI-AN-4kX"/>
+                        <viewControllerLayoutGuide type="bottom" id="zKn-Il-uBc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eDN-YV-KUL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xLi-EP-dsb">
+                                <rect key="frame" x="258" y="136" width="85" height="21"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xit-cT-nnz">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-xS-OPM">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Dhw-uv-BtH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9WP-ZN-oFf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GcC-nR-nGa">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
+                                                                        <subviews>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jYV-QS-xWf">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7qp-b7-B5S">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUD-3T-eCO">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
+                                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9j-1X-o1d">
+                                <rect key="frame" x="279" y="201" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xLi-EP-dsb" firstAttribute="centerX" secondItem="eDN-YV-KUL" secondAttribute="centerX" id="YLe-Xw-EqY"/>
+                            <constraint firstItem="xLi-EP-dsb" firstAttribute="top" secondItem="MPI-AN-4kX" secondAttribute="bottom" constant="72" id="sLG-JR-T1k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultadoIMC" destination="n9j-1X-o1d" id="Hja-hd-RW8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKu-zo-VMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="413"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xly-M6-e6z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YZv-E2-Rd9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fxa-Eh-WxW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cgx-0h-tzd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdR-IT-wgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421" y="-342"/>
         </scene>
     </scenes>
 </document>
