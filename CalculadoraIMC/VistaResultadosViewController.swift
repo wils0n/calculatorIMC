@@ -9,8 +9,14 @@
 import UIKit
 
 class VistaResultadosViewController: UIViewController {
-
+    
+    var indiceIM:Double = 0;
     @IBOutlet weak var resultadoIMC: UILabel!
+    
+    override func viewWillAppear(animated: Bool) {
+        resultadoIMC.text = String(indiceIM)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

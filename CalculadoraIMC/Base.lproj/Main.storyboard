@@ -168,7 +168,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9j-1X-o1d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9j-1X-o1d">
                                 <rect key="frame" x="279" y="201" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -177,6 +177,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="n9j-1X-o1d" firstAttribute="centerX" secondItem="xLi-EP-dsb" secondAttribute="centerX" id="TLR-FU-w93"/>
+                            <constraint firstItem="n9j-1X-o1d" firstAttribute="centerY" secondItem="eDN-YV-KUL" secondAttribute="centerY" id="Tco-hq-yiq"/>
                             <constraint firstItem="xLi-EP-dsb" firstAttribute="centerX" secondItem="eDN-YV-KUL" secondAttribute="centerX" id="YLe-Xw-EqY"/>
                             <constraint firstItem="xLi-EP-dsb" firstAttribute="top" secondItem="MPI-AN-4kX" secondAttribute="bottom" constant="72" id="sLG-JR-T1k"/>
                         </constraints>
